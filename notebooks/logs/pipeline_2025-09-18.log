@@ -558,3 +558,646 @@ NameError: name 'PATH_COMMUNES' is not defined
 8    8.217449  
 9    8.190042  
 2025-09-18 14:54:20,503 - INFO - Pipeline terminé avec succès.
+2025-09-18 17:33:57,711 - INFO - Use pytorch device_name: cpu
+2025-09-18 17:33:57,711 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 17:34:00,411 - INFO - Début du pipeline.
+2025-09-18 17:35:45,245 - INFO - 1192 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 17:35:45,295 - INFO - Top 10 offres les plus proches:
+           id                                              titre  \
+0     1071294                                 Data analyst (H/F)   
+1     6717979                                 Data analyst (H/F)   
+2  5399136679                       Data analyst (H/F) (Intérim)   
+3  5377455904          BUSINESS DATA analyste informatiqueE (IT)   
+4  5380688338                            Data Analyst Senior H/F   
+5  5331594969                          Data Analyst Power Bi H/F   
+6  5339226722  consultant informatique Business analyste info...   
+7  5386276133                                       Data Analyst   
+8  5144986652            Assistant Data Analyst - Alternance H/F   
+9  5369807488                         Ingénieur Data Analyst F/H   
+
+                                         description               entreprise  \
+0  Analyse des données (économiques, statistiques...        ENGAGETECH SOCIAL   
+1  Analyse des données (économiques, statistiques...        L'ECOLE NUMERIQUE   
+2  Poste : Votre mission au sein de la data facto...                   LEADER   
+3  Je recherche pour un de mes clients un consult...         UCASE CONSULTING   
+4  Nous recherchons un Data Analyst Senior pour a...                  Ekkiden   
+5  L'agence Providence recrute pour l'un de ses c...               PROvidence   
+6  Dans le cadre du renforcement de notre équipe ...        CRYSTAL PLACEMENT   
+7  Offre d’emploi : Data Analyst Power BI – H/F L...                Worldgrid   
+8  Au sein de notre entreprise partenaire Vos mis...  Digital School of Paris   
+9  Afin de compléter nos équipes actuelles, nous ...                  Adentis   
+
+   similarity  
+0    9.274402  
+1    9.274402  
+2    8.678255  
+3    8.422405  
+4    8.389194  
+5    8.341934  
+6    8.313993  
+7    8.254158  
+8    8.217449  
+9    8.190042  
+2025-09-18 17:35:45,295 - INFO - Pipeline terminé avec succès.
+2025-09-18 17:38:20,255 - INFO - Use pytorch device_name: cpu
+2025-09-18 17:38:20,255 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 17:38:22,710 - INFO - Début du pipeline.
+2025-09-18 17:38:39,545 - ERROR - Erreur API Adzuna: 401 Client Error: Unauthorized for url: https://api.adzuna.com/v1/api/jobs/fr/search/8?app_id=6d1ef246&app_key=be32a57e2cb65294f3107364dfde50c0&title_only=data+analyst&where=78300&results_per_page=50&distance=100000
+2025-09-18 17:38:51,029 - INFO - 195 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 17:38:51,061 - ERROR - Pipeline échoué: 5 columns passed, passed data had 20 columns
+Traceback (most recent call last):
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 939, in _finalize_columns_and_data
+    columns = _validate_or_indexify_columns(contents, columns)
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 986, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 5 columns passed, passed data had 20 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_1691/1651710481.py", line 55, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean,engine, top_k=10)
+  File "/tmp/ipykernel_1691/1016482105.py", line 18, in search_similar_offres
+    return pd.DataFrame(result.fetchall(),columns=["id","titre","description","entreprise","similarity"])
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/frame.py", line 851, in __init__
+    arrays, columns, index = nested_data_to_arrays(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 520, in nested_data_to_arrays
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 845, in to_arrays
+    content, columns = _finalize_columns_and_data(arr, columns, dtype)
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 942, in _finalize_columns_and_data
+    raise ValueError(err) from err
+ValueError: 5 columns passed, passed data had 20 columns
+2025-09-18 17:46:21,540 - INFO - Use pytorch device_name: cpu
+2025-09-18 17:46:21,541 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 17:46:24,000 - INFO - Début du pipeline.
+2025-09-18 17:47:54,729 - INFO - 1192 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 17:47:54,762 - ERROR - Pipeline échoué: 5 columns passed, passed data had 19 columns
+Traceback (most recent call last):
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 939, in _finalize_columns_and_data
+    columns = _validate_or_indexify_columns(contents, columns)
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 986, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 5 columns passed, passed data had 19 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_1691/1651710481.py", line 55, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean,engine, top_k=10)
+  File "/tmp/ipykernel_1691/1052989278.py", line 26, in search_similar_offres
+    return pd.DataFrame(result.fetchall(),columns=["id","titre","description","entreprise","similarity"])
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/frame.py", line 851, in __init__
+    arrays, columns, index = nested_data_to_arrays(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 520, in nested_data_to_arrays
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 845, in to_arrays
+    content, columns = _finalize_columns_and_data(arr, columns, dtype)
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 942, in _finalize_columns_and_data
+    raise ValueError(err) from err
+ValueError: 5 columns passed, passed data had 19 columns
+2025-09-18 17:51:18,081 - INFO - Use pytorch device_name: cpu
+2025-09-18 17:51:18,081 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 17:51:20,539 - INFO - Début du pipeline.
+2025-09-18 17:52:46,070 - INFO - 1192 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 17:52:46,106 - INFO - Top 10 offres les plus proches:
+           id          source     recherche  \
+0     1071294  France Travail  data analyst   
+1     6717979  France Travail  data analyst   
+2  5399136679          Adzuna  data analyst   
+3  5377455904          Adzuna  data analyst   
+4  5380688338          Adzuna  data analyst   
+5  5331594969          Adzuna  data analyst   
+6  5339226722          Adzuna  data analyst   
+7  5386276133          Adzuna  data analyst   
+8  5144986652          Adzuna  data analyst   
+9  5369807488          Adzuna  data analyst   
+
+                                               titre  \
+0                                 Data analyst (H/F)   
+1                                 Data analyst (H/F)   
+2                       Data analyst (H/F) (Intérim)   
+3          BUSINESS DATA analyste informatiqueE (IT)   
+4                            Data Analyst Senior H/F   
+5                          Data Analyst Power Bi H/F   
+6  consultant informatique Business analyste info...   
+7                                       Data Analyst   
+8            Assistant Data Analyst - Alternance H/F   
+9                         Ingénieur Data Analyst F/H   
+
+                                         description               entreprise  \
+0  Analyse des données (économiques, statistiques...        ENGAGETECH SOCIAL   
+1  Analyse des données (économiques, statistiques...        L'ECOLE NUMERIQUE   
+2  Poste : Votre mission au sein de la data facto...                   LEADER   
+3  Je recherche pour un de mes clients un consult...         UCASE CONSULTING   
+4  Nous recherchons un Data Analyst Senior pour a...                  Ekkiden   
+5  L'agence Providence recrute pour l'un de ses c...               PROvidence   
+6  Dans le cadre du renforcement de notre équipe ...        CRYSTAL PLACEMENT   
+7  Offre d’emploi : Data Analyst Power BI – H/F L...                Worldgrid   
+8  Au sein de notre entreprise partenaire Vos mis...  Digital School of Paris   
+9  Afin de compléter nos équipes actuelles, nous ...                  Adentis   
+
+                      lieu   latitude  longitude                   commune  \
+0       75 - Paris (Dept.)  48.863987   2.360474   PARIS 3E ARRONDISSEMENT   
+1       75 - Paris (Dept.)  48.854630   2.381637  PARIS 11E ARRONDISSEMENT   
+2        Vosges, Grand-Est  48.267094   6.325730        BOUXIERES-AUX-BOIS   
+3     Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+4      La-Madeleine, Lille  50.637180   3.063020                     LILLE   
+5      Pont-Rousseau, Rezé  47.216840  -1.556740                    NANTES   
+6      Vienne-Nord, Vienne  45.524220   4.878280                    VIENNE   
+7              Lyon, Rhône  45.720350   5.086660        COLOMBIER-SAUGNIEU   
+8     Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+9  Toulouse, Haute-Garonne  43.604360   1.442950                  TOULOUSE   
+
+  code_postal departement                  type_contrat_libelle  \
+0       75103          75  Contrat à durée déterminée - 12 Mois   
+1       75111          75  Contrat à durée déterminée - 12 Mois   
+2       88069          88                              contract   
+3       75101          75                             permanent   
+4       59350          59                                  None   
+5       44109          44                                  None   
+6       38544          38                              contract   
+7       69299          69                                  None   
+8       75101          75                                  None   
+9       31555          31                             permanent   
+
+  date_publication                                                url  \
+0       2025-08-16  https://candidat.francetravail.fr/offres/reche...   
+1       2025-05-14  https://candidat.francetravail.fr/offres/reche...   
+2       2025-09-14  https://www.adzuna.fr/land/ad/5399136679?se=7m...   
+3       2025-09-01  https://www.adzuna.fr/details/5377455904?utm_m...   
+4       2025-09-03  https://www.adzuna.fr/details/5380688338?utm_m...   
+5       2025-08-01  https://www.adzuna.fr/land/ad/5331594969?se=4F...   
+6       2025-08-05  https://www.adzuna.fr/details/5339226722?utm_m...   
+7       2025-09-06  https://www.adzuna.fr/land/ad/5386276133?se=Zq...   
+8       2025-04-15  https://www.adzuna.fr/details/5144986652?utm_m...   
+9       2025-08-27  https://www.adzuna.fr/details/5369807488?utm_m...   
+
+      secteur_activites               last_updated  \
+0                  None 2025-09-18 15:51:48.084582   
+1                  None 2025-09-18 15:51:48.084582   
+2               Unknown 2025-09-18 15:51:48.084582   
+3  Emplois Informatique 2025-09-18 15:51:48.084582   
+4               Unknown 2025-09-18 15:51:48.084582   
+5               Unknown 2025-09-18 15:51:48.084582   
+6  Emplois Informatique 2025-09-18 15:51:48.084582   
+7               Unknown 2025-09-18 15:51:48.084582   
+8               Unknown 2025-09-18 15:51:48.084582   
+9  Emplois Informatique 2025-09-18 15:51:48.084582   
+
+                                           embedding     simil  
+0  [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+1  [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+2  [0.03045524,0.1699375,-0.24012755,-0.28052828,...  8.678255  
+3  [-0.11152046,0.053265944,-0.21601282,-0.115801...  8.422405  
+4  [-0.33283094,0.26524156,-0.10381974,-0.2060563...  8.389194  
+5  [-0.26687083,0.12346186,-0.1323017,-0.29031098...  8.341934  
+6  [-0.21034008,0.049764868,-0.26530236,-0.170762...  8.313993  
+7  [-0.110750064,0.3328231,0.03961673,-0.12473221...  8.254158  
+8  [-0.16603181,-0.10719148,-0.16857225,-0.183727...  8.217449  
+9  [-0.42013767,0.113572486,-0.21237096,-0.167724...  8.190042  
+2025-09-18 17:52:46,106 - INFO - Pipeline terminé avec succès.
+2025-09-18 17:55:26,879 - INFO - Use pytorch device_name: cpu
+2025-09-18 17:55:26,880 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 17:55:29,509 - INFO - Début du pipeline.
+2025-09-18 17:57:08,917 - INFO - 1192 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 17:57:09,045 - INFO - Top 10 offres les plus proches:
+              id          source     recherche  \
+0        1071294  France Travail  data analyst   
+1        6717979  France Travail  data analyst   
+2     5399136679          Adzuna  data analyst   
+3     5377455904          Adzuna  data analyst   
+4     5380688338          Adzuna  data analyst   
+...          ...             ...           ...   
+1194  5398349407          Adzuna  data analyst   
+1195  5328156433          Adzuna  data analyst   
+1196  5328151253          Adzuna  data analyst   
+1197  5328157381          Adzuna  data analyst   
+1198  5225542507          Adzuna  data analyst   
+
+                                                  titre  \
+0                                    Data analyst (H/F)   
+1                                    Data analyst (H/F)   
+2                          Data analyst (H/F) (Intérim)   
+3             BUSINESS DATA analyste informatiqueE (IT)   
+4                               Data Analyst Senior H/F   
+...                                                 ...   
+1194  Stage : Stage - Data Analyst - Supply Chain H/...   
+1195                        Data Analyst - Puzzle Games   
+1196                       Data Analyst - Midcore Games   
+1197              Experienced Data Analyst - Ad Network   
+1198                                       Data Analyst   
+
+                                            description         entreprise  \
+0     Analyse des données (économiques, statistiques...  ENGAGETECH SOCIAL   
+1     Analyse des données (économiques, statistiques...  L'ECOLE NUMERIQUE   
+2     Poste : Votre mission au sein de la data facto...             LEADER   
+3     Je recherche pour un de mes clients un consult...   UCASE CONSULTING   
+4     Nous recherchons un Data Analyst Senior pour a...            Ekkiden   
+...                                                 ...                ...   
+1194  A Paris 1er, à partir de fin février 2026 La d...          Chanel Fr   
+1195  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1196  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1197  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1198  Step out to the hotel. Experiences to enjoy in...         Staycation   
+
+                      lieu   latitude  longitude                   commune  \
+0       75 - Paris (Dept.)  48.863987   2.360474   PARIS 3E ARRONDISSEMENT   
+1       75 - Paris (Dept.)  48.854630   2.381637  PARIS 11E ARRONDISSEMENT   
+2        Vosges, Grand-Est  48.267094   6.325730        BOUXIERES-AUX-BOIS   
+3     Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+4      La-Madeleine, Lille  50.637180   3.063020                     LILLE   
+...                    ...        ...        ...                       ...   
+1194  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1195  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1196  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1197  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1198  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+
+     code_postal departement                  type_contrat_libelle  \
+0          75103          75  Contrat à durée déterminée - 12 Mois   
+1          75111          75  Contrat à durée déterminée - 12 Mois   
+2          88069          88                              contract   
+3          75101          75                             permanent   
+4          59350          59                                  None   
+...          ...         ...                                   ...   
+1194       75101          75                              contract   
+1195       75101          75                                  None   
+1196       75101          75                                  None   
+1197       75101          75                                  None   
+1198       75101          75                                  None   
+
+     date_publication                                                url  \
+0          2025-08-16  https://candidat.francetravail.fr/offres/reche...   
+1          2025-05-14  https://candidat.francetravail.fr/offres/reche...   
+2          2025-09-14  https://www.adzuna.fr/land/ad/5399136679?se=ol...   
+3          2025-09-01  https://www.adzuna.fr/details/5377455904?utm_m...   
+4          2025-09-03  https://www.adzuna.fr/details/5380688338?utm_m...   
+...               ...                                                ...   
+1194       2025-09-14  https://www.adzuna.fr/details/5398349407?utm_m...   
+1195       2025-07-30  https://www.adzuna.fr/details/5328156433?utm_m...   
+1196       2025-07-30  https://www.adzuna.fr/details/5328151253?utm_m...   
+1197       2025-07-30  https://www.adzuna.fr/details/5328157381?utm_m...   
+1198       2025-05-31  https://www.adzuna.fr/details/5225542507?utm_m...   
+
+                        secteur_activites               last_updated  \
+0                                    None 2025-09-18 15:56:03.107510   
+1                                    None 2025-09-18 15:56:03.107510   
+2                                 Unknown 2025-09-18 15:56:03.107510   
+3                    Emplois Informatique 2025-09-18 15:56:03.107510   
+4                                 Unknown 2025-09-18 15:56:03.107510   
+...                                   ...                        ...   
+1194                     Emplois Diplômés 2025-09-18 15:56:03.107510   
+1195                              Unknown 2025-09-18 15:56:03.107510   
+1196                              Unknown 2025-09-18 15:56:03.107510   
+1197   Emplois RP, Publicité et Marketing 2025-09-18 15:56:03.107510   
+1198  Emplois Hospitalité et Restauration 2025-09-18 15:56:03.107510   
+
+                                              embedding     simil  
+0     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+1     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+2     [0.03045524,0.1699375,-0.24012755,-0.28052828,...  8.678255  
+3     [-0.11152046,0.053265944,-0.21601282,-0.115801...  8.422405  
+4     [-0.33283094,0.26524156,-0.10381974,-0.2060563...  8.389194  
+...                                                 ...       ...  
+1194  [0.181611,0.047875796,0.012646466,0.12987444,-...  1.244984  
+1195  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1196  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1197  [-0.047512278,-0.08512629,-0.42329302,-0.14886...  1.043736  
+1198  [0.52853096,0.061109714,0.042487927,0.2531239,...  0.713317  
+
+[1199 rows x 19 columns]
+2025-09-18 17:57:09,045 - INFO - Pipeline terminé avec succès.
+2025-09-18 18:10:17,166 - INFO - Use pytorch device_name: cpu
+2025-09-18 18:10:17,167 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 18:10:19,909 - INFO - Début du pipeline.
+2025-09-18 18:11:55,649 - INFO - 1192 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 18:11:55,761 - INFO - Top 10 offres les plus proches:
+              id          source     recherche  \
+0        6717979  France Travail  data analyst   
+1        1071294  France Travail  data analyst   
+2     5399136679          Adzuna  data analyst   
+3     5377455904          Adzuna  data analyst   
+4     5380688338          Adzuna  data analyst   
+...          ...             ...           ...   
+1194  5398349407          Adzuna  data analyst   
+1195  5328156433          Adzuna  data analyst   
+1196  5328151253          Adzuna  data analyst   
+1197  5328157381          Adzuna  data analyst   
+1198  5225542507          Adzuna  data analyst   
+
+                                                  titre  \
+0                                    Data analyst (H/F)   
+1                                    Data analyst (H/F)   
+2                          Data analyst (H/F) (Intérim)   
+3             BUSINESS DATA analyste informatiqueE (IT)   
+4                               Data Analyst Senior H/F   
+...                                                 ...   
+1194  Stage : Stage - Data Analyst - Supply Chain H/...   
+1195                        Data Analyst - Puzzle Games   
+1196                       Data Analyst - Midcore Games   
+1197              Experienced Data Analyst - Ad Network   
+1198                                       Data Analyst   
+
+                                            description         entreprise  \
+0     Analyse des données (économiques, statistiques...  L'ECOLE NUMERIQUE   
+1     Analyse des données (économiques, statistiques...  ENGAGETECH SOCIAL   
+2     Poste : Votre mission au sein de la data facto...             LEADER   
+3     Je recherche pour un de mes clients un consult...   UCASE CONSULTING   
+4     Nous recherchons un Data Analyst Senior pour a...            Ekkiden   
+...                                                 ...                ...   
+1194  A Paris 1er, à partir de fin février 2026 La d...          Chanel Fr   
+1195  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1196  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1197  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1198  Step out to the hotel. Experiences to enjoy in...         Staycation   
+
+                      lieu   latitude  longitude                   commune  \
+0       75 - Paris (Dept.)  48.854630   2.381637  PARIS 11E ARRONDISSEMENT   
+1       75 - Paris (Dept.)  48.863987   2.360474   PARIS 3E ARRONDISSEMENT   
+2        Vosges, Grand-Est  48.267094   6.325730        BOUXIERES-AUX-BOIS   
+3     Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+4      La-Madeleine, Lille  50.637180   3.063020                     LILLE   
+...                    ...        ...        ...                       ...   
+1194  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1195  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1196  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1197  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1198  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+
+     code_postal departement                  type_contrat_libelle  \
+0          75111          75  Contrat à durée déterminée - 12 Mois   
+1          75103          75  Contrat à durée déterminée - 12 Mois   
+2          88069          88                              contract   
+3          75101          75                             permanent   
+4          59350          59                                  None   
+...          ...         ...                                   ...   
+1194       75101          75                              contract   
+1195       75101          75                                  None   
+1196       75101          75                                  None   
+1197       75101          75                                  None   
+1198       75101          75                                  None   
+
+     date_publication                                                url  \
+0          2025-05-14  https://candidat.francetravail.fr/offres/reche...   
+1          2025-08-16  https://candidat.francetravail.fr/offres/reche...   
+2          2025-09-14  https://www.adzuna.fr/land/ad/5399136679?se=wF...   
+3          2025-09-01  https://www.adzuna.fr/details/5377455904?utm_m...   
+4          2025-09-03  https://www.adzuna.fr/details/5380688338?utm_m...   
+...               ...                                                ...   
+1194       2025-09-14  https://www.adzuna.fr/details/5398349407?utm_m...   
+1195       2025-07-30  https://www.adzuna.fr/details/5328156433?utm_m...   
+1196       2025-07-30  https://www.adzuna.fr/details/5328151253?utm_m...   
+1197       2025-07-30  https://www.adzuna.fr/details/5328157381?utm_m...   
+1198       2025-05-31  https://www.adzuna.fr/details/5225542507?utm_m...   
+
+                        secteur_activites               last_updated  \
+0                                    None 2025-09-18 16:10:52.774011   
+1                                    None 2025-09-18 16:10:52.774011   
+2                                 Unknown 2025-09-18 16:10:52.774011   
+3                    Emplois Informatique 2025-09-18 16:10:52.774011   
+4                                 Unknown 2025-09-18 16:10:52.774011   
+...                                   ...                        ...   
+1194                     Emplois Diplômés 2025-09-18 16:10:52.774011   
+1195                              Unknown 2025-09-18 16:10:52.774011   
+1196                              Unknown 2025-09-18 16:10:52.774011   
+1197   Emplois RP, Publicité et Marketing 2025-09-18 16:10:52.774011   
+1198  Emplois Hospitalité et Restauration 2025-09-18 16:10:52.774011   
+
+                                              embedding     simil  
+0     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+1     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+2     [0.03045524,0.1699375,-0.24012755,-0.28052828,...  8.678255  
+3     [-0.11152046,0.053265944,-0.21601282,-0.115801...  8.422405  
+4     [-0.33283094,0.26524156,-0.10381974,-0.2060563...  8.389194  
+...                                                 ...       ...  
+1194  [0.181611,0.047875796,0.012646466,0.12987444,-...  1.244984  
+1195  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1196  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1197  [-0.047512278,-0.08512629,-0.42329302,-0.14886...  1.043736  
+1198  [0.52853096,0.061109714,0.042487927,0.2531239,...  0.713317  
+
+[1199 rows x 19 columns]
+2025-09-18 18:11:55,761 - INFO - Pipeline terminé avec succès.
+2025-09-18 18:16:06,111 - INFO - Use pytorch device_name: cpu
+2025-09-18 18:16:06,111 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 18:16:08,661 - INFO - Début du pipeline.
+2025-09-18 18:17:45,877 - INFO - 1192 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 18:17:46,005 - INFO - Top 10 offres les plus proches:
+              id          source     recherche  \
+0        6717979  France Travail  data analyst   
+1        1071294  France Travail  data analyst   
+2     5399136679          Adzuna  data analyst   
+3     5377455904          Adzuna  data analyst   
+4     5380688338          Adzuna  data analyst   
+...          ...             ...           ...   
+1194  5398349407          Adzuna  data analyst   
+1195  5328156433          Adzuna  data analyst   
+1196  5328151253          Adzuna  data analyst   
+1197  5328157381          Adzuna  data analyst   
+1198  5225542507          Adzuna  data analyst   
+
+                                                  titre  \
+0                                    Data analyst (H/F)   
+1                                    Data analyst (H/F)   
+2                          Data analyst (H/F) (Intérim)   
+3             BUSINESS DATA analyste informatiqueE (IT)   
+4                               Data Analyst Senior H/F   
+...                                                 ...   
+1194  Stage : Stage - Data Analyst - Supply Chain H/...   
+1195                        Data Analyst - Puzzle Games   
+1196                       Data Analyst - Midcore Games   
+1197              Experienced Data Analyst - Ad Network   
+1198                                       Data Analyst   
+
+                                            description         entreprise  \
+0     Analyse des données (économiques, statistiques...  L'ECOLE NUMERIQUE   
+1     Analyse des données (économiques, statistiques...  ENGAGETECH SOCIAL   
+2     Poste : Votre mission au sein de la data facto...             LEADER   
+3     Je recherche pour un de mes clients un consult...   UCASE CONSULTING   
+4     Nous recherchons un Data Analyst Senior pour a...            Ekkiden   
+...                                                 ...                ...   
+1194  A Paris 1er, à partir de fin février 2026 La d...          Chanel Fr   
+1195  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1196  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1197  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1198  Step out to the hotel. Experiences to enjoy in...         Staycation   
+
+                      lieu   latitude  longitude                   commune  \
+0       75 - Paris (Dept.)  48.854630   2.381637  PARIS 11E ARRONDISSEMENT   
+1       75 - Paris (Dept.)  48.863987   2.360474   PARIS 3E ARRONDISSEMENT   
+2        Vosges, Grand-Est  48.267094   6.325730        BOUXIERES-AUX-BOIS   
+3     Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+4      La-Madeleine, Lille  50.637180   3.063020                     LILLE   
+...                    ...        ...        ...                       ...   
+1194  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1195  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1196  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1197  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1198  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+
+     code_postal departement                  type_contrat_libelle  \
+0          75111          75  Contrat à durée déterminée - 12 Mois   
+1          75103          75  Contrat à durée déterminée - 12 Mois   
+2          88069          88                              contract   
+3          75101          75                             permanent   
+4          59350          59                                  None   
+...          ...         ...                                   ...   
+1194       75101          75                              contract   
+1195       75101          75                                  None   
+1196       75101          75                                  None   
+1197       75101          75                                  None   
+1198       75101          75                                  None   
+
+     date_publication                                                url  \
+0          2025-05-14  https://candidat.francetravail.fr/offres/reche...   
+1          2025-08-16  https://candidat.francetravail.fr/offres/reche...   
+2          2025-09-14  https://www.adzuna.fr/land/ad/5399136679?se=_u...   
+3          2025-09-01  https://www.adzuna.fr/details/5377455904?utm_m...   
+4          2025-09-03  https://www.adzuna.fr/details/5380688338?utm_m...   
+...               ...                                                ...   
+1194       2025-09-14  https://www.adzuna.fr/details/5398349407?utm_m...   
+1195       2025-07-30  https://www.adzuna.fr/details/5328156433?utm_m...   
+1196       2025-07-30  https://www.adzuna.fr/details/5328151253?utm_m...   
+1197       2025-07-30  https://www.adzuna.fr/details/5328157381?utm_m...   
+1198       2025-05-31  https://www.adzuna.fr/details/5225542507?utm_m...   
+
+                        secteur_activites               last_updated  \
+0                                    None 2025-09-18 16:16:40.770641   
+1                                    None 2025-09-18 16:16:40.770641   
+2                                 Unknown 2025-09-18 16:16:40.770641   
+3                    Emplois Informatique 2025-09-18 16:16:40.770641   
+4                                 Unknown 2025-09-18 16:16:40.770641   
+...                                   ...                        ...   
+1194                     Emplois Diplômés 2025-09-18 16:16:40.770641   
+1195                              Unknown 2025-09-18 16:16:40.770641   
+1196                              Unknown 2025-09-18 16:16:40.770641   
+1197   Emplois RP, Publicité et Marketing 2025-09-18 16:16:40.770641   
+1198  Emplois Hospitalité et Restauration 2025-09-18 16:16:40.770641   
+
+                                              embedding     simil  
+0     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+1     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+2     [0.03045524,0.1699375,-0.24012755,-0.28052828,...  8.678255  
+3     [-0.11152046,0.053265944,-0.21601282,-0.115801...  8.422405  
+4     [-0.33283094,0.26524156,-0.10381974,-0.2060563...  8.389194  
+...                                                 ...       ...  
+1194  [0.181611,0.047875796,0.012646466,0.12987444,-...  1.244984  
+1195  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1196  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1197  [-0.047512278,-0.08512629,-0.42329302,-0.14886...  1.043736  
+1198  [0.52853096,0.061109714,0.042487927,0.2531239,...  0.713317  
+
+[1199 rows x 19 columns]
+2025-09-18 18:17:46,005 - INFO - Pipeline terminé avec succès.
+2025-09-18 18:19:36,539 - INFO - Use pytorch device_name: cpu
+2025-09-18 18:19:36,539 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 18:19:39,086 - INFO - Début du pipeline.
+2025-09-18 18:21:53,261 - INFO - 1192 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 18:21:53,437 - INFO - Top 10 offres les plus proches:
+              id          source     recherche  \
+0        6717979  France Travail  data analyst   
+1        1071294  France Travail  data analyst   
+2     5399136679          Adzuna  data analyst   
+3     5377455904          Adzuna  data analyst   
+4     5380688338          Adzuna  data analyst   
+...          ...             ...           ...   
+1194  5398349407          Adzuna  data analyst   
+1195  5328151253          Adzuna  data analyst   
+1196  5328156433          Adzuna  data analyst   
+1197  5328157381          Adzuna  data analyst   
+1198  5225542507          Adzuna  data analyst   
+
+                                                  titre  \
+0                                    Data analyst (H/F)   
+1                                    Data analyst (H/F)   
+2                          Data analyst (H/F) (Intérim)   
+3             BUSINESS DATA analyste informatiqueE (IT)   
+4                               Data Analyst Senior H/F   
+...                                                 ...   
+1194  Stage : Stage - Data Analyst - Supply Chain H/...   
+1195                       Data Analyst - Midcore Games   
+1196                        Data Analyst - Puzzle Games   
+1197              Experienced Data Analyst - Ad Network   
+1198                                       Data Analyst   
+
+                                            description         entreprise  \
+0     Analyse des données (économiques, statistiques...  L'ECOLE NUMERIQUE   
+1     Analyse des données (économiques, statistiques...  ENGAGETECH SOCIAL   
+2     Poste : Votre mission au sein de la data facto...             LEADER   
+3     Je recherche pour un de mes clients un consult...   UCASE CONSULTING   
+4     Nous recherchons un Data Analyst Senior pour a...            Ekkiden   
+...                                                 ...                ...   
+1194  A Paris 1er, à partir de fin février 2026 La d...          Chanel Fr   
+1195  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1196  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1197  About Voodoo Founded in 2013, Voodoo is a tech...             Voodoo   
+1198  Step out to the hotel. Experiences to enjoy in...         Staycation   
+
+                      lieu   latitude  longitude                   commune  \
+0       75 - Paris (Dept.)  48.854630   2.381637  PARIS 11E ARRONDISSEMENT   
+1       75 - Paris (Dept.)  48.863987   2.360474   PARIS 3E ARRONDISSEMENT   
+2        Vosges, Grand-Est  48.267094   6.325730        BOUXIERES-AUX-BOIS   
+3     Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+4      La-Madeleine, Lille  50.637180   3.063020                     LILLE   
+...                    ...        ...        ...                       ...   
+1194  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1195  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1196  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1197  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+1198  Paris, Ile-de-France  48.863840   2.344631  PARIS 1ER ARRONDISSEMENT   
+
+     code_postal departement                  type_contrat_libelle  \
+0          75111          75  Contrat à durée déterminée - 12 Mois   
+1          75103          75  Contrat à durée déterminée - 12 Mois   
+2          88069          88                              contract   
+3          75101          75                             permanent   
+4          59350          59                                  None   
+...          ...         ...                                   ...   
+1194       75101          75                              contract   
+1195       75101          75                                  None   
+1196       75101          75                                  None   
+1197       75101          75                                  None   
+1198       75101          75                                  None   
+
+     date_publication                                                url  \
+0          2025-05-14  https://candidat.francetravail.fr/offres/reche...   
+1          2025-08-16  https://candidat.francetravail.fr/offres/reche...   
+2          2025-09-14  https://www.adzuna.fr/land/ad/5399136679?se=iH...   
+3          2025-09-01  https://www.adzuna.fr/details/5377455904?utm_m...   
+4          2025-09-03  https://www.adzuna.fr/details/5380688338?utm_m...   
+...               ...                                                ...   
+1194       2025-09-14  https://www.adzuna.fr/details/5398349407?utm_m...   
+1195       2025-07-30  https://www.adzuna.fr/details/5328151253?utm_m...   
+1196       2025-07-30  https://www.adzuna.fr/details/5328156433?utm_m...   
+1197       2025-07-30  https://www.adzuna.fr/details/5328157381?utm_m...   
+1198       2025-05-31  https://www.adzuna.fr/details/5225542507?utm_m...   
+
+                        secteur_activites               last_updated  \
+0                                    None 2025-09-18 16:20:07.290842   
+1                                    None 2025-09-18 16:20:07.290842   
+2                                 Unknown 2025-09-18 16:20:07.290842   
+3                    Emplois Informatique 2025-09-18 16:20:07.290842   
+4                                 Unknown 2025-09-18 16:20:07.290842   
+...                                   ...                        ...   
+1194                     Emplois Diplômés 2025-09-18 16:20:07.290842   
+1195                              Unknown 2025-09-18 16:20:07.290842   
+1196                              Unknown 2025-09-18 16:20:07.290842   
+1197   Emplois RP, Publicité et Marketing 2025-09-18 16:20:07.290842   
+1198  Emplois Hospitalité et Restauration 2025-09-18 16:20:07.290842   
+
+                                              embedding     simil  
+0     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+1     [-0.21561643,-0.04702154,-0.20713773,-0.208345...  9.274402  
+2     [0.03045524,0.1699375,-0.24012755,-0.28052828,...  8.678255  
+3     [-0.11152046,0.053265944,-0.21601282,-0.115801...  8.422405  
+4     [-0.33283094,0.26524156,-0.10381974,-0.2060563...  8.389194  
+...                                                 ...       ...  
+1194  [0.181611,0.047875796,0.012646466,0.12987444,-...  1.244984  
+1195  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1196  [-0.0070085214,-0.09567679,-0.4050759,-0.19253...  1.089300  
+1197  [-0.047512278,-0.08512629,-0.42329302,-0.14886...  1.043736  
+1198  [0.52853096,0.061109714,0.042487927,0.2531239,...  0.713317  
+
+[1199 rows x 19 columns]
+2025-09-18 18:21:53,437 - INFO - Pipeline terminé avec succès.
