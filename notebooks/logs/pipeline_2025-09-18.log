@@ -1,0 +1,399 @@
+2025-09-18 08:52:05,657 - INFO - Use pytorch device_name: cpu
+2025-09-18 08:52:05,657 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 08:52:08,318 - INFO - Début du pipeline.
+2025-09-18 08:52:08,319 - ERROR - Pipeline échoué: name 'get_ft_token' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/610960568.py", line 7, in run_pipeline
+    token = get_ft_token()
+NameError: name 'get_ft_token' is not defined
+2025-09-18 08:52:58,553 - INFO - Use pytorch device_name: cpu
+2025-09-18 08:52:58,554 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 08:53:01,120 - INFO - Début du pipeline.
+2025-09-18 08:53:01,120 - ERROR - Pipeline échoué: name 'get_ft_token' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/610960568.py", line 7, in run_pipeline
+    token = get_ft_token()
+NameError: name 'get_ft_token' is not defined
+2025-09-18 08:57:01,967 - INFO - Use pytorch device_name: cpu
+2025-09-18 08:57:01,968 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 08:57:04,480 - INFO - Début du pipeline.
+2025-09-18 08:57:04,480 - ERROR - Pipeline échoué: name 'get_ft_token' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/610960568.py", line 7, in run_pipeline
+    token = get_ft_token()
+NameError: name 'get_ft_token' is not defined
+2025-09-18 08:57:46,335 - INFO - Use pytorch device_name: cpu
+2025-09-18 08:57:46,335 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 08:57:49,078 - INFO - Début du pipeline.
+2025-09-18 08:58:21,631 - ERROR - ❌ Erreur lors de l'UPSERT : Unconsumed column names: embedding
+2025-09-18 08:58:21,686 - ERROR - Pipeline échoué: name 'engine' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/610960568.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean, top_k=10)
+  File "/tmp/ipykernel_2352/2741627722.py", line 14, in search_similar_offres
+    with engine.connect() as conn:
+NameError: name 'engine' is not defined
+2025-09-18 09:01:49,157 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:01:49,158 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:01:51,735 - INFO - Début du pipeline.
+2025-09-18 09:02:20,390 - ERROR - Pipeline échoué: embedding
+Traceback (most recent call last):
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 1651, in __getattr__
+    return self._index[key][1]
+KeyError: 'embedding'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/610960568.py", line 47, in run_pipeline
+    save_to_postgres_upsert(df, engine, table_name=DB_TABLE_NAME)
+  File "/tmp/ipykernel_2352/252513962.py", line 53, in save_to_postgres_upsert
+    'embedding': stmt.excluded.embedding
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 1653, in __getattr__
+    raise AttributeError(key) from err
+AttributeError: embedding
+2025-09-18 09:08:05,930 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:08:05,930 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:08:08,628 - INFO - Début du pipeline.
+2025-09-18 09:13:20,590 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:13:20,590 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:19:04,929 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:19:04,929 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:20:14,772 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:20:14,772 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:20:17,163 - INFO - Début du pipeline.
+2025-09-18 09:22:02,454 - INFO - 1167 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 09:23:38,739 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:23:38,739 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:24:03,005 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:24:03,005 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:24:05,270 - INFO - Début du pipeline.
+2025-09-18 09:26:48,028 - INFO - 1167 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 09:52:49,224 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:52:49,225 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:52:52,015 - INFO - Début du pipeline.
+2025-09-18 09:54:03,898 - INFO - 1167 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 09:57:29,169 - INFO - Use pytorch device_name: cpu
+2025-09-18 09:57:29,169 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 09:57:33,029 - INFO - Début du pipeline.
+2025-09-18 10:00:08,259 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:00:08,297 - ERROR - Pipeline échoué: name 'engine' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/610960568.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean, top_k=10)
+  File "/tmp/ipykernel_2352/2741627722.py", line 14, in search_similar_offres
+    with engine.connect() as conn:
+NameError: name 'engine' is not defined
+2025-09-18 10:04:04,024 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:04:04,025 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:04:06,568 - INFO - Début du pipeline.
+2025-09-18 10:07:00,868 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:07:00,917 - ERROR - Pipeline échoué: name 'engine' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/610960568.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean, top_k=10)
+  File "/tmp/ipykernel_2352/943754993.py", line 15, in search_similar_offres
+    with engine.connect() as conn:
+NameError: name 'engine' is not defined
+2025-09-18 10:09:42,339 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:09:42,339 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:09:45,125 - INFO - Début du pipeline.
+2025-09-18 10:12:02,524 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:12:02,554 - ERROR - Pipeline échoué: name 'engine' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/4158073127.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean, top_k=10)
+  File "/tmp/ipykernel_2352/943754993.py", line 15, in search_similar_offres
+    with engine.connect() as conn:
+NameError: name 'engine' is not defined
+2025-09-18 10:18:02,749 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:18:02,749 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:18:05,814 - INFO - Début du pipeline.
+2025-09-18 10:20:36,647 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:20:36,690 - ERROR - Pipeline échoué: name 'engine' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/4158073127.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean, top_k=10)
+  File "/tmp/ipykernel_2352/3356990887.py", line 17, in search_similar_offres
+    with engine.connect() as conn:
+NameError: name 'engine' is not defined
+2025-09-18 10:25:12,572 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:25:12,572 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:26:25,932 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:26:25,932 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:26:28,467 - INFO - Début du pipeline.
+2025-09-18 10:29:03,147 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:29:03,309 - ERROR - Pipeline échoué: (psycopg2.errors.UndefinedFunction) ERREUR:  l'opérateur n'existe pas : vector <#> numeric[]
+LINE 5:             1 - (embedding <#> ARRAY[ -0.35705894231796265,0...
+                                   ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+
+[SQL: 
+        SELECT id, titre, description, entreprise, simil
+        FROM (
+            SELECT id, titre, description, entreprise,
+            1 - (embedding <#> %(ref)s) AS simil
+            FROM offres
+        ) AS s
+        ORDER BY simil DESC
+        LIMIT %(k)s
+    ]
+[parameters: {'ref': [-0.35705894231796265, 0.28038808703422546, -0.2466389387845993, -0.2002444863319397, -0.02742161974310875, 0.04788031429052353, -0.05658514425158501, ... (7904 characters truncated) ...  -0.04994774982333183, 0.1796347200870514, -0.04268697276711464, -0.09439573436975479, 0.10525072365999222, 0.16230735182762146, -0.12002955377101898], 'k': 10}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedFunction: ERREUR:  l'opérateur n'existe pas : vector <#> numeric[]
+LINE 5:             1 - (embedding <#> ARRAY[ -0.35705894231796265,0...
+                                   ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/1036600749.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean,engine, top_k=10)
+  File "/tmp/ipykernel_2352/1642685057.py", line 18, in search_similar_offres
+    result = conn.execute(query, {"ref": ref_emb, "k": top_k})
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedFunction) ERREUR:  l'opérateur n'existe pas : vector <#> numeric[]
+LINE 5:             1 - (embedding <#> ARRAY[ -0.35705894231796265,0...
+                                   ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+
+[SQL: 
+        SELECT id, titre, description, entreprise, simil
+        FROM (
+            SELECT id, titre, description, entreprise,
+            1 - (embedding <#> %(ref)s) AS simil
+            FROM offres
+        ) AS s
+        ORDER BY simil DESC
+        LIMIT %(k)s
+    ]
+[parameters: {'ref': [-0.35705894231796265, 0.28038808703422546, -0.2466389387845993, -0.2002444863319397, -0.02742161974310875, 0.04788031429052353, -0.05658514425158501, ... (7904 characters truncated) ...  -0.04994774982333183, 0.1796347200870514, -0.04268697276711464, -0.09439573436975479, 0.10525072365999222, 0.16230735182762146, -0.12002955377101898], 'k': 10}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-18 10:39:54,338 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:39:54,338 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:39:56,853 - INFO - Début du pipeline.
+2025-09-18 10:42:04,410 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:42:04,457 - ERROR - Pipeline échoué: 'list' object has no attribute 'tolist'
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/1036600749.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean,engine, top_k=10)
+  File "/tmp/ipykernel_2352/3596801761.py", line 2, in search_similar_offres
+    ref_emb = compute_embedding(reference_text).tolist()
+AttributeError: 'list' object has no attribute 'tolist'
+2025-09-18 10:46:30,525 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:46:30,525 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:46:33,075 - INFO - Début du pipeline.
+2025-09-18 10:49:10,865 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:49:10,923 - ERROR - Pipeline échoué: (psycopg2.errors.SyntaxError) ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 5:             1 - (embedding <#> :ref::vector) AS simil
+                                       ^
+
+[SQL: 
+        SELECT id, titre, description, entreprise, simil
+        FROM (
+            SELECT id, titre, description, entreprise,
+            1 - (embedding <#> :ref::vector) AS simil
+            FROM offres
+        ) AS s
+        ORDER BY simil DESC
+        LIMIT %(k)s
+    ]
+[parameters: {'k': 10}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 5:             1 - (embedding <#> :ref::vector) AS simil
+                                       ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2352/1036600749.py", line 51, in run_pipeline
+    top_offres = search_similar_offres(reference_text_clean,engine, top_k=10)
+  File "/tmp/ipykernel_2352/1597529247.py", line 21, in search_similar_offres
+    result = conn.execute(query, {"ref": ref_emb_str, "k": top_k})
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/thierry/.pyenv/versions/3.10.6/envs/fresh_env/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.SyntaxError) ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 5:             1 - (embedding <#> :ref::vector) AS simil
+                                       ^
+
+[SQL: 
+        SELECT id, titre, description, entreprise, simil
+        FROM (
+            SELECT id, titre, description, entreprise,
+            1 - (embedding <#> :ref::vector) AS simil
+            FROM offres
+        ) AS s
+        ORDER BY simil DESC
+        LIMIT %(k)s
+    ]
+[parameters: {'k': 10}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-18 10:53:39,462 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:53:39,462 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:53:42,137 - INFO - Début du pipeline.
+2025-09-18 10:56:13,606 - INFO - 1190 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 10:56:13,680 - INFO - Top 10 offres les plus proches:
+           id                                              titre  \
+0     6717979                                 Data analyst (H/F)   
+1     1071294                                 Data analyst (H/F)   
+2  5400064907                       Data analyst (H/F) (Intérim)   
+3  5399136679                       Data analyst (H/F) (Intérim)   
+4  5377455904          BUSINESS DATA analyste informatiqueE (IT)   
+5  5380688338                            Data Analyst Senior H/F   
+6  5331594969                          Data Analyst Power Bi H/F   
+7  5339226722  consultant informatique Business analyste info...   
+8  5386276133                                       Data Analyst   
+9  5144986652            Assistant Data Analyst - Alternance H/F   
+
+                                         description               entreprise  \
+0  Analyse des données (économiques, statistiques...        L'ECOLE NUMERIQUE   
+1  Analyse des données (économiques, statistiques...        ENGAGETECH SOCIAL   
+2  Poste : Votre mission au sein de la data facto...                   Leader   
+3  Poste : Votre mission au sein de la data facto...                   Leader   
+4  Je recherche pour un de mes clients un consult...         UCASE CONSULTING   
+5  Nous recherchons un Data Analyst Senior pour a...                  Ekkiden   
+6  L'agence Providence recrute pour l'un de ses c...               PROvidence   
+7  Dans le cadre du renforcement de notre équipe ...        CRYSTAL PLACEMENT   
+8  Offre d’emploi : Data Analyst Power BI – H/F L...                Worldgrid   
+9  Au sein de notre entreprise partenaire Vos mis...  Digital School of Paris   
+
+   similarity  
+0    9.274402  
+1    9.274402  
+2    8.678255  
+3    8.678255  
+4    8.422405  
+5    8.389194  
+6    8.341934  
+7    8.313993  
+8    8.254158  
+9    8.217449  
+2025-09-18 10:56:13,681 - INFO - Pipeline terminé avec succès.
+2025-09-18 10:58:11,143 - INFO - Use pytorch device_name: cpu
+2025-09-18 10:58:11,143 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 10:58:13,881 - INFO - Début du pipeline.
+2025-09-18 11:00:36,064 - INFO - 1190 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 11:00:36,121 - INFO - Top 10 offres les plus proches:
+           id                                              titre  \
+0     1071294                                 Data analyst (H/F)   
+1     6717979                                 Data analyst (H/F)   
+2  5400064907                       Data analyst (H/F) (Intérim)   
+3  5399136679                       Data analyst (H/F) (Intérim)   
+4  5377455904          BUSINESS DATA analyste informatiqueE (IT)   
+5  5380688338                            Data Analyst Senior H/F   
+6  5331594969                          Data Analyst Power Bi H/F   
+7  5339226722  consultant informatique Business analyste info...   
+8  5386276133                                       Data Analyst   
+9  5144986652            Assistant Data Analyst - Alternance H/F   
+
+                                         description               entreprise  \
+0  Analyse des données (économiques, statistiques...        ENGAGETECH SOCIAL   
+1  Analyse des données (économiques, statistiques...        L'ECOLE NUMERIQUE   
+2  Poste : Votre mission au sein de la data facto...                   Leader   
+3  Poste : Votre mission au sein de la data facto...                   Leader   
+4  Je recherche pour un de mes clients un consult...         UCASE CONSULTING   
+5  Nous recherchons un Data Analyst Senior pour a...                  Ekkiden   
+6  L'agence Providence recrute pour l'un de ses c...               PROvidence   
+7  Dans le cadre du renforcement de notre équipe ...        CRYSTAL PLACEMENT   
+8  Offre d’emploi : Data Analyst Power BI – H/F L...                Worldgrid   
+9  Au sein de notre entreprise partenaire Vos mis...  Digital School of Paris   
+
+   similarity  
+0    9.274402  
+1    9.274402  
+2    8.678255  
+3    8.678255  
+4    8.422405  
+5    8.389194  
+6    8.341934  
+7    8.313993  
+8    8.254158  
+9    8.217449  
+2025-09-18 11:00:36,121 - INFO - Pipeline terminé avec succès.
+2025-09-18 11:09:01,504 - INFO - Use pytorch device_name: cpu
+2025-09-18 11:09:01,504 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 11:09:04,070 - INFO - Début du pipeline.
+2025-09-18 11:11:28,062 - INFO - 1190 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 11:11:28,116 - INFO - Top 10 offres les plus proches:
+           id                                              titre  \
+0     1071294                                 Data analyst (H/F)   
+1     6717979                                 Data analyst (H/F)   
+2  5400064907                       Data analyst (H/F) (Intérim)   
+3  5399136679                       Data analyst (H/F) (Intérim)   
+4  5377455904          BUSINESS DATA analyste informatiqueE (IT)   
+5  5380688338                            Data Analyst Senior H/F   
+6  5331594969                          Data Analyst Power Bi H/F   
+7  5339226722  consultant informatique Business analyste info...   
+8  5386276133                                       Data Analyst   
+9  5144986652            Assistant Data Analyst - Alternance H/F   
+
+                                         description               entreprise  \
+0  Analyse des données (économiques, statistiques...        ENGAGETECH SOCIAL   
+1  Analyse des données (économiques, statistiques...        L'ECOLE NUMERIQUE   
+2  Poste : Votre mission au sein de la data facto...                   Leader   
+3  Poste : Votre mission au sein de la data facto...                   Leader   
+4  Je recherche pour un de mes clients un consult...         UCASE CONSULTING   
+5  Nous recherchons un Data Analyst Senior pour a...                  Ekkiden   
+6  L'agence Providence recrute pour l'un de ses c...               PROvidence   
+7  Dans le cadre du renforcement de notre équipe ...        CRYSTAL PLACEMENT   
+8  Offre d’emploi : Data Analyst Power BI – H/F L...                Worldgrid   
+9  Au sein de notre entreprise partenaire Vos mis...  Digital School of Paris   
+
+   similarity  
+0    9.274402  
+1    9.274402  
+2    8.678255  
+3    8.678255  
+4    8.422405  
+5    8.389194  
+6    8.341934  
+7    8.313993  
+8    8.254158  
+9    8.217449  
+2025-09-18 11:11:28,116 - INFO - Pipeline terminé avec succès.
