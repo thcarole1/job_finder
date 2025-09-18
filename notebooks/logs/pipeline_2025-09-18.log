@@ -397,3 +397,103 @@ LINE 5:             1 - (embedding <#> :ref::vector) AS simil
 8    8.254158  
 9    8.217449  
 2025-09-18 11:11:28,116 - INFO - Pipeline terminé avec succès.
+2025-09-18 12:57:27,411 - INFO - Use pytorch device_name: cpu
+2025-09-18 12:57:27,412 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 12:57:29,962 - INFO - Début du pipeline.
+2025-09-18 12:57:29,963 - ERROR - Pipeline échoué: name 'get_ft_token' is not defined
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2246/1878499759.py", line 7, in run_pipeline
+    token = get_ft_token()
+NameError: name 'get_ft_token' is not defined
+2025-09-18 12:58:54,496 - INFO - Use pytorch device_name: cpu
+2025-09-18 12:58:54,496 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 12:58:56,954 - INFO - Début du pipeline.
+2025-09-18 13:00:39,117 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 13:00:39,162 - INFO - Top 10 offres les plus proches:
+           id                                              titre  \
+0     6717979                                 Data analyst (H/F)   
+1     1071294                                 Data analyst (H/F)   
+2  5400064907                       Data analyst (H/F) (Intérim)   
+3  5399136679                       Data analyst (H/F) (Intérim)   
+4  5377455904          BUSINESS DATA analyste informatiqueE (IT)   
+5  5380688338                            Data Analyst Senior H/F   
+6  5331594969                          Data Analyst Power Bi H/F   
+7  5339226722  consultant informatique Business analyste info...   
+8  5386276133                                       Data Analyst   
+9  5144986652            Assistant Data Analyst - Alternance H/F   
+
+                                         description               entreprise  \
+0  Analyse des données (économiques, statistiques...        L'ECOLE NUMERIQUE   
+1  Analyse des données (économiques, statistiques...        ENGAGETECH SOCIAL   
+2  Poste : Votre mission au sein de la data facto...                   Leader   
+3  Poste : Votre mission au sein de la data facto...                   Leader   
+4  Je recherche pour un de mes clients un consult...         UCASE CONSULTING   
+5  Nous recherchons un Data Analyst Senior pour a...                  Ekkiden   
+6  L'agence Providence recrute pour l'un de ses c...               PROvidence   
+7  Dans le cadre du renforcement de notre équipe ...        CRYSTAL PLACEMENT   
+8  Offre d’emploi : Data Analyst Power BI – H/F L...                Worldgrid   
+9  Au sein de notre entreprise partenaire Vos mis...  Digital School of Paris   
+
+   similarity  
+0    9.274402  
+1    9.274402  
+2    8.678255  
+3    8.678255  
+4    8.422405  
+5    8.389194  
+6    8.341934  
+7    8.313993  
+8    8.254158  
+9    8.217449  
+2025-09-18 13:00:39,162 - INFO - Pipeline terminé avec succès.
+2025-09-18 13:03:31,040 - INFO - Use pytorch device_name: cpu
+2025-09-18 13:03:31,040 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 13:04:07,703 - INFO - Use pytorch device_name: cpu
+2025-09-18 13:04:07,703 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 13:04:23,768 - INFO - Use pytorch device_name: cpu
+2025-09-18 13:04:23,768 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 13:04:26,346 - INFO - Début du pipeline.
+2025-09-18 13:06:03,506 - INFO - Use pytorch device_name: cpu
+2025-09-18 13:06:03,506 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 13:06:06,043 - INFO - Début du pipeline.
+2025-09-18 13:09:12,558 - INFO - Use pytorch device_name: cpu
+2025-09-18 13:09:12,558 - INFO - Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-09-18 13:09:15,323 - INFO - Début du pipeline.
+2025-09-18 13:10:49,175 - INFO - 1189 offres insérées/mises à jour dans PostgreSQL.
+2025-09-18 13:10:49,209 - INFO - Top 10 offres les plus proches:
+           id                                              titre  \
+0     6717979                                 Data analyst (H/F)   
+1     1071294                                 Data analyst (H/F)   
+2  5399136679                       Data analyst (H/F) (Intérim)   
+3  5377455904          BUSINESS DATA analyste informatiqueE (IT)   
+4  5380688338                            Data Analyst Senior H/F   
+5  5331594969                          Data Analyst Power Bi H/F   
+6  5339226722  consultant informatique Business analyste info...   
+7  5386276133                                       Data Analyst   
+8  5144986652            Assistant Data Analyst - Alternance H/F   
+9  5369807488                         Ingénieur Data Analyst F/H   
+
+                                         description               entreprise  \
+0  Analyse des données (économiques, statistiques...        L'ECOLE NUMERIQUE   
+1  Analyse des données (économiques, statistiques...        ENGAGETECH SOCIAL   
+2  Poste : Votre mission au sein de la data facto...                   Leader   
+3  Je recherche pour un de mes clients un consult...         UCASE CONSULTING   
+4  Nous recherchons un Data Analyst Senior pour a...                  Ekkiden   
+5  L'agence Providence recrute pour l'un de ses c...               PROvidence   
+6  Dans le cadre du renforcement de notre équipe ...        CRYSTAL PLACEMENT   
+7  Offre d’emploi : Data Analyst Power BI – H/F L...                Worldgrid   
+8  Au sein de notre entreprise partenaire Vos mis...  Digital School of Paris   
+9  Afin de compléter nos équipes actuelles, nous ...                  Adentis   
+
+   similarity  
+0    9.274402  
+1    9.274402  
+2    8.678255  
+3    8.422405  
+4    8.389194  
+5    8.341934  
+6    8.313993  
+7    8.254158  
+8    8.217449  
+9    8.190042  
+2025-09-18 13:10:49,209 - INFO - Pipeline terminé avec succès.
